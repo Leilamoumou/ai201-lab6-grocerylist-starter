@@ -33,7 +33,7 @@ This PR adds a bulk purchase endpoint that marks all items in a list as purchase
 Should the endpoint treat already-purchased items as no-ops, or should it preserve their original purchase history? Would the team prefer a 400 for a missing user_id, or write purchase records with a null buyer?
 
 ### Verdict
-- [x] Request Changes — needs fixes before merging
+- [x] Request Changes : needs fixes before merging
 
 **Rationale**: The endpoint mutates already-purchased items, reports the wrong count, and accepts invalid input, so I would not merge it as-is
 
@@ -62,7 +62,9 @@ This PR adds a stats endpoint for a grocery list so that the app can report tota
 Should the category breakdown be based on remaining items only, or should it intentionally reflect all items regardless of purchase state? Would the team want the endpoint to mirror the existing 404 behavior for missing lists?
 
 ### Verdict
-- [x] Request Changes — needs fixes before merging
+
+
+- [x] Request Changes : needs fixes before merging
 
 **Rationale**: The endpoint’s category counts do not match the stated shopping-view use case, and it mishandles missing list IDs compared with the rest of the API.
 
